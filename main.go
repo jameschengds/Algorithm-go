@@ -5,6 +5,8 @@ import (
 	"math"
 	"sort"
 	"strconv"
+
+	leet "github.com/Algorithm-go/leetcode"
 )
 
 func main() {
@@ -14,7 +16,8 @@ func main() {
 	//b := reverse(1234563)
 	//b := niu("235KJ", "99TJQ")
 	//fmt.Print(b)
-	b := niu("5JJJJ", "KKKK5")
+	//b := niu("5JJJJ", "KKKK5")
+	b := leet.RomanToInt("LVIII")
 	fmt.Print(b)
 }
 func main1() []int {
