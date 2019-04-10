@@ -17,8 +17,12 @@ func main() {
 	//b := niu("235KJ", "99TJQ")
 	//fmt.Print(b)
 	//b := niu("5JJJJ", "KKKK5")
-	b := leet.RomanToInt("LVIII")
+	//b := leet.RomanToInt("LVIII")
+	var a = []string{"aca", "cba"}
+
+	b := leet.LongestCommonPrefix(a)
 	fmt.Print(b)
+
 }
 func main1() []int {
 	nums := [2]int{3, 3}
