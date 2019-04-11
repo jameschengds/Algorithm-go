@@ -19,9 +19,10 @@ func main() {
 	//b := niu("5JJJJ", "KKKK5")
 	//b := leet.RomanToInt("LVIII")
 	//var a = []string{"aca", "cba"}
-	var a = []int{-1, -2, -3, 4, 1, 3, 0, 3, -2, 1, -2, 2, -1, 1, -5, 4, -3}
+	var a = []int{0, 2, 1, -3}
 	//b := leet.LongestCommonPrefix(a)
-	b := leet.ThreeSum(a)
+	//b := leet.ThreeSum(a)
+	b := leet.ThreeSumClosest(a, 1)
 	fmt.Print(b)
 
 }

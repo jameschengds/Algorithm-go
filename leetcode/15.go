@@ -2,28 +2,21 @@ package leetcode
 
 import (
 	"sort"
-	"strconv"
 )
 
-func ThreeSum(nums []int) [][]int {
+func ThreeSum(nums []int) [][3]int {
 	sort.Ints(nums)
 	length := len(nums)
-	resp := make([]string, 0)
-	response := make([][]int, 0)
+	resp := make(map[[3]int]bool, 0)
+	//response := make([][3]int, 0)
+	re := make([][3]int, 0)
 
 	for i := 0; i < length; i++ {
 		for j := i + 1; j < length; j++ {
 			for k := j + 1; k < length; k++ {
 				if nums[i]+nums[j]+nums[k] == 0 {
-					flag := false
-					for l := range resp {
-						if resp[l] == strconv.Itoa(nums[i])+strconv.Itoa(nums[j])+strconv.Itoa(nums[k]) {
-							flag = true
-						}
-					}
-					if flag == false {
-						resp = append(resp, strconv.Itoa(nums[i])+strconv.Itoa(nums[j])+strconv.Itoa(nums[k]))
-						response = append(response, []int{nums[i], nums[j], nums[k]})
+					if _, ok := resp[[3]int{nums[i], nums[j], nums[k]}]; !ok {
+						resp[[3]int{nums[i], nums[j], nums[k]}] = true
 					}
 				} else if nums[i]+nums[j]+nums[k] > 0 {
 					break
@@ -31,15 +24,8 @@ func ThreeSum(nums []int) [][]int {
 			}
 		}
 	}
-	////对接结果去重，这种可以成功但是leetcode会超时
-	//for i := range resp {
-	//	for j := i + 1; j < len(resp); j++ {
-	//		if resp[j][1] == resp[i][1] && resp[j][2] == resp[i][2] && resp[j][0] == resp[i][0] {
-	//			resp = append(resp[:j], resp[j+1:]...)
-	//			j--
-	//		}
-	//	}
-	//}
-
-	return response
+	for i, _ := range resp {
+		re = append(re, i)
+	}
+	return re
 }
