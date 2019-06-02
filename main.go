@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/Algorithm-go/otherAlgorithm"
 	"math"
 	"sort"
 	"strconv"
-
-	leet "github.com/Algorithm-go/leetcode"
 )
 
 func main() {
@@ -25,7 +24,11 @@ func main() {
 	//b := leet.ThreeSumClosest(a, 1)
 	//b := leet.LetterCombinations(a)
 	//b := leet.IsValid(a)
-	b := leet.Divide(100, 3)
+	//b := leet.Divide(100, 3)
+	//aa := []int{-1, 2, 3, 4, 5, 6}
+	bb := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	//, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+	b := otherAlgorithm.JackMa(bb, 3, 3)
 	fmt.Print(b)
 
 }

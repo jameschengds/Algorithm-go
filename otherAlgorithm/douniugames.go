@@ -16,6 +16,7 @@ func niu(paiA, paiB string) int {
 			sliceA = append(sliceA, int(byteA[i]-48))
 		}
 	}
+
 	for i := range byteB {
 		if byteB[i] > 57 {
 			sliceB = append(sliceB, 10)
