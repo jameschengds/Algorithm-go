@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Algorithm-go/leetcode"
+	"github.com/Algorithm-go/otherAlgorithm"
 	"math"
 	"sort"
 	"strconv"
@@ -26,13 +26,15 @@ func main() {
 	//b := leet.IsValid(a)
 	//b := leet.Divide(100, 3)
 	//aa := []int{-2, 0, 1, 1, 2}
-	//bb := []int{-1, -2, -9, -6}
+	//bb := []int{1, 2, 9, 6, 10, 20, 10, 10, 20, 30, 40}
+	bb := []int{4, 1, 7, 6, 9, 2, 8, 0, 3, 5}
 	//, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
 	//b := otherAlgorithm.JackMa(bb, 3, 3)
 	//b := leetcode.MaxProduct(bb)
 	//b := leetcode.UniquePaths(7, 3)
 	//b := leetcode.ThreeSum_1(aa)
-	b := leetcode.GenerateParenthesis(7)
+	//b := leetcode.GenerateParenthesis(7)
+	b := otherAlgorithm.MaoPao(bb)
 	//b := leetcode.NumDecodings("123532432")
 	//b := otherAlgorithm.FindMax(aa)
 	fmt.Print(b)

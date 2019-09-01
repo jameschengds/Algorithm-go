@@ -1,5 +1,6 @@
 package otherAlgorithm
 
+//
 func FindMax(res []int) int {
 	for i := 1; i < len(res); i++ {
 		res[i] = max(res[i], res[i-1]+res[i])
