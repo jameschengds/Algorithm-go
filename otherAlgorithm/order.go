@@ -3,16 +3,16 @@ package otherAlgorithm
 // 冒泡排序
 func MaoPao(nums []int) []int {
 	for i := 0; i < len(nums); i++ {
-		//var flag = false
+		var flag = false
 		for j := 0; j < len(nums)-i-1; j++ {
 			if nums[j] > nums[j+1] {
 				nums[j], nums[j+1] = nums[j+1], nums[j]
-				//flag = true
+				flag = true
 			}
 		}
-		//if flag == false {
-		//	break
-		//}
+		if flag == false {
+			break
+		}
 	}
 	return nums
 }
